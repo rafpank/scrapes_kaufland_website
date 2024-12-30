@@ -11,3 +11,6 @@ Text cleanup: When extracting text from the HTML, the program removes leading an
 Output format: Each extracted HTML element is displayed on a separate line.
 Documentation with docstrings: The code is documented with clear docstrings, providing useful details about functionality and usage.
 This program is designed to simplify data extraction from web pages, ensuring accuracy and ease of use.
+
+# command line call
+# $ python .\main.py "https://sklep.kaufland.pl/oferta/przeglad.html?kloffer-week=current&kloffer-category=01_Mi%C4%99so__Dr%C3%B3b__W%C4%99dliny" "//*[@id='cat_0002_K-Card']/div[2]/div/div"
