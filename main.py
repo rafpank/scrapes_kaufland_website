@@ -36,7 +36,7 @@ def product_list_finding(url, category_xpath):
     """
     dom = fromstring(page_downloading(url))
     try: 
-        products = dom.xpath(category_xpath)  # Znajdź ogólny kontener dla produktów
+        products = dom.xpath(category_xpath)  
         if not products:
             print('Nie znaleziono produktów dla podanej kategorii')
             return []
@@ -59,11 +59,11 @@ def extracting_products_details (product):
         - 'weight': The product weight, or "Brak wagi" if not found.
         - 'price': The product price, or "Brak ceny" if not found.
     """
-    producer = product.xpath('.//div[1]/div[4]/div[1]/text()')  # XPath do producenta 
-    name = product.xpath('.//div[1]/div[4]/div[2]/text()')      # XPath do nazwy produktu
+    producer = product.xpath('.//div[1]/div[4]/div[1]/text()')  
+    name = product.xpath('.//div[1]/div[4]/div[2]/text()')      
     weight = product.xpath('.//div[1]/div[4]/div[3]/text()')
-    price_per_kg = product.xpath('.//div[1]/div[4]/div[4]/text()')     # XPath do ceny
-    alternative_price = product.xpath('.//div[2]/div/div/div[2]/text()')  # XPath do alternatywnej ceny
+    price_per_kg = product.xpath('.//div[1]/div[4]/div[4]/text()')     
+    alternative_price = product.xpath('.//div[2]/div/div/div[2]/text()')  
 
     price = alternative_price[0].strip() if alternative_price else (price_per_kg[0].strip() if price_per_kg else "Brak ceny")
     
