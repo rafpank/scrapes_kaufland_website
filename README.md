@@ -1,6 +1,6 @@
 # scrapes_kaufland_website
 
-Program to Automatically Extract Selected Information from a Kaufland Website
+# Program to Automatically Extract Selected Information from a Kaufland Website
 This program allows users to automatically extract specific information from a Kaufland website. The user provides only the webpage URL and the XPath, which can be easily copied from the browser.
 
 Features:
