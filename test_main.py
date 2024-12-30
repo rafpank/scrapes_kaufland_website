@@ -1,3 +1,6 @@
+# Calling from the command prompt
+# $ pytest -v .\test_main.py   
+
 from lxml.html import fromstring
 from M05L20 import page_downloading, product_list_finding, extracting_products_details, product_list_assembling
 
